@@ -12,6 +12,10 @@ public class Prueba {
 			
 		Nomina nomina = new Nomina ("1","1212","Arturito","2020-04-15","2020-04-15","2020-04-15");	
 		NominaDAO n = new NominaDAO();
+		
+		n.registrar(nomina);
+		
+		
 		System.out.println( n.buscar(nomina));
 		
 		

@@ -11,6 +11,7 @@
 	crossorigin="anonymous">
 </head>
 <body>
+${alerta}
 	<div class="container card" style="display: flex; background: silver;">
 		<a href="buscar.jsp" class="btn btn-primary btn-lg active"
 			role="button" aria-pressed="true">Buscar Empleado</a>

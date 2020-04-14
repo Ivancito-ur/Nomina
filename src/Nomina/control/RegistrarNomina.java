@@ -1,6 +1,8 @@
 package Nomina.control;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,7 +33,6 @@ public class RegistrarNomina extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		response.sendRedirect("/Nomina/index.jsp");
 	}
 
 	/**
@@ -50,13 +51,23 @@ public class RegistrarNomina extends HttpServlet {
 		nomina.setRetiro(request.getParameter("fechaR"));
 		nomina.setIngreso(request.getParameter("fechaI"));
 		
+		
+		
+		request.setAttribute("alerta",
+				"<div class='alert alert-success' role='alert'>Agregado correctamente</div>");
+		
 		try {
 			NominaDAO nominaDAO = new NominaDAO();
 			nominaDAO.registrar(nomina);
 			
 		} catch (Exception e) {
 			// TODO: handle exception
+		
 		}
+		RequestDispatcher rd;
+		rd = request.getRequestDispatcher("/index.jsp");
+		rd.forward(request, response);
+		
 		
 	
 		

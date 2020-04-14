@@ -34,15 +34,6 @@ public class BuscarNomina extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-		
 		Nomina nomina = new Nomina();
 		nomina.setCodigo((String)request.getParameter("codigo"));
 		
@@ -62,6 +53,17 @@ public class BuscarNomina extends HttpServlet {
 		rd = request.getRequestDispatcher("/informacion.jsp");
 		rd.forward(request, response);
 		
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+		
+	
 		
 		
 		
