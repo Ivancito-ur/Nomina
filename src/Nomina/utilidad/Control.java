@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Nomina.modelo.Nomina;
+
 /**
  * Servlet implementation class Control
  */
@@ -40,6 +42,18 @@ public class Control extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		// doGet(request, response);
+		
+		Nomina nomina = new Nomina();
+		
+		nomina.setCodigo(request.getParameter("codigo"));
+		nomina.setCedula(request.getParameter("cedula"));
+		nomina.setNombre(request.getParameter("nombre"));
+		nomina.setNacimiento(request.getParameter("fechaN"));
+		nomina.setRetiro(request.getParameter("fechaR"));
+		nomina.setIngreso(request.getParameter("fechaI"));
+		
+		
+		
 
 	}
 }

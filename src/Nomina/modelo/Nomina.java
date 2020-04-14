@@ -11,7 +11,7 @@ public class Nomina {
 	private String ingreso;
 	private String retiro;
 	
-	
+	static final int numero_variables = 6;
 
 	
 	public Nomina(String codigo, String cedula, String nombre, String nacimiento, String ingreso, String retiro) {
@@ -23,6 +23,17 @@ public class Nomina {
 		this.ingreso = ingreso;
 		this.retiro = retiro;
 	}
+	
+	public Nomina() {
+		super();
+	}
+	
+	
+
+	public static int getNumeroVariables() {
+		return numero_variables;
+	}
+
 	public String getCodigo() {
 		return codigo;
 	}
