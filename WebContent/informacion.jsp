@@ -22,8 +22,8 @@
 	crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="container"">
-		<form class="contact_form" method="GET" action="RegistrarNomina"
+	<div class="container">
+		<form class="contact_form" method="GET" 
 			runat="server">
 			<div class="form-group">
 				<ul class="list-group">
