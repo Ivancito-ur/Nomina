@@ -15,8 +15,16 @@ public class Prueba {
 		
 		n.registrar(nomina);
 		
+		Nomina a = new Nomina();
 		
-		System.out.println( n.buscar(nomina));
+		a= n.buscar(nomina);
+		
+	System.out.println(a.getCodigo());	
+    System.out.println(a.getCedula());	
+    System.out.println(a.getNombre()); 
+    System.out.println(a.getNacimiento());
+    System.out.println(a.getIngreso());	
+    System.out.println(a.getRetiro());	
 		
 		
 
